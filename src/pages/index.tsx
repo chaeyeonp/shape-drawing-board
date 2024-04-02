@@ -1,9 +1,9 @@
-import DrawingBoard from "@/components/DrawingBoard";
+import DrawingBoard from '@/components/DrawingBoard';
 
 export default function Home() {
-    return (
-        <>
-            <DrawingBoard/>
-        </>
-    );
+  return (
+    <>
+      <DrawingBoard />
+    </>
+  );
 }
