@@ -58,12 +58,10 @@ const useMouseHandler = (): UseMouseHandlerReturn => {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
     if (!isDrawing && !isMoving) return;
 
-    // Obtain the current mouse position
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Use produce to create a new state based on the current state and updates
     const newState = produce(shapes, draft => {
       const shape = draft.find(shape => shape.id === selectedShapeId);
       if (shape) {
