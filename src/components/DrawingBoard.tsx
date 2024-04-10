@@ -20,7 +20,9 @@ const DrawingBoard: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('shapes', JSON.stringify(shapes));
+    if (shapes.length > 0) {
+      localStorage.setItem('shapes', JSON.stringify(shapes));
+    }
   }, [shapes]);
 
   return (
